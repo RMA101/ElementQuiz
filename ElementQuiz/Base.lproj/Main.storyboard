@@ -40,10 +40,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuT-qc-Gbf">
                                         <rect key="frame" x="31" y="193" width="93" height="30"/>
                                         <state key="normal" title="Show Answer"/>
+                                        <connections>
+                                            <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrl-Yt-9ma"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZX-kO-GdN">
                                         <rect key="frame" x="31.5" y="235" width="92" height="30"/>
                                         <state key="normal" title="Next Element"/>
+                                        <connections>
+                                            <action selector="gotoNextElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="49V-Uc-04x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -54,6 +60,10 @@
                             <constraint firstItem="cxa-TS-Pee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v3k-c4-LGH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="fFr-hL-Cpl" id="ONU-Ro-FyP"/>
+                        <outlet property="imageView" destination="6bF-tE-TOj" id="NId-oD-3fH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
