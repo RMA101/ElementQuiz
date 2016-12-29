@@ -35,11 +35,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func gotoNextElement(_ sender: Any) {
-    }
-    @IBAction func showAnswer(_ sender: Any) {
+        currentElementIndex += 1
+        if currentElementIndex >= elementList.count {
+            currentElementIndex = 0
+        }
+        updateElement()
     }
     
-
+    @IBAction func showAnswer(_ sender: Any) {
+        answerLabel.text = elementList[currentElementIndex]
+    }
+    
 }
 
 
